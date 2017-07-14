@@ -16,11 +16,17 @@ function submitForm(){
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
+    var manufacture = $("#manufacture").val();
+    var model = $("#model").val();
+    var currentColour = $("#currentColour").val();
+    var numberOfDoors = $("#noOfDoors").val();
+    var choiceOfColour = $("#colourChoice").val();
+    var shutsAndReturns = $( "input[name*='rr']" ).val();
 
     $.ajax({
         type: "POST",
         url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&message=" + message,
+        data: "name=" + name + "&email=" + email +"&manufacture="+manufacture+"&model="+model+"&CurrentColour="+currentColour+"&NumberofDoors="+numberOfDoors+"&ChoiceOfColour="+colourChoice+"&ShutsAndReturns="+shutsAndReturns+ "&message=" + message,
         success : function(text){
             if (text == "success"){
                 formSuccess();

@@ -16,6 +16,42 @@ if (empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
+if (empty($_POST["manufacture"])) {
+    $errorMSG .= "manufacture is required ";
+} else {
+    $manufacture = $_POST["manufacture"];
+}
+
+if (empty($_POST["model"])) {
+    $errorMSG .= "model is required ";
+} else {
+    $model = $_POST["model"];
+}
+
+if (empty($_POST["currentColour"])) {
+    $errorMSG .= "Current Colour is required ";
+} else {
+    $currentColour = $_POST["currentColour"];
+}
+
+if (empty($_POST["noOfdoors"])) {
+    $errorMSG .= "Number of doors is required ";
+} else {
+    $noOfdoors = $_POST["noOfdoors"];
+}
+
+if (empty($_POST["colourChoice"])) {
+    $errorMSG .= "Choice of Colour is required ";
+} else {
+    $colourChoice = $_POST["colourChoice"];
+}
+
+if (empty($_POST["shutsAndReturns"])) {
+    $errorMSG .= "Shuts and returns is required ";
+} else {
+    $shutsAndReturns = $_POST["shutsAndReturns"];
+}
+
 // MESSAGE
 if (empty($_POST["message"])) {
     $errorMSG .= "Message is required ";
@@ -25,7 +61,7 @@ if (empty($_POST["message"])) {
 
 
 $EmailTo = "emailaddress@test.com";
-$Subject = "New Message Received";
+$Subject = "New Message Received From Website";
 
 // prepare email body text
 $Body = "";
@@ -35,9 +71,26 @@ $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
+$Body .= "Manufacture: ";
+$Body .= $manufacture;
+$Body .= "\n";
+$Body .= "Model: ";
+$Body .= $model;
+$Body .= "\n";
+$Body .= "Current Colour: ";
+$Body .= $currentColour;
+$Body .= "\n";
+$Body .= "Number of Doors ";
+$Body .= $noOfdoors;
+$Body .= "\n";
+$Body .= "Colour of Choice ";
+$Body .= $colourChoice;
+$Body .= "\n";
+$Body .= "Shuts and Returns";
+$Body .= $shutsAndReturns;
+$Body .= "\n";
 $Body .= "Message: ";
 $Body .= $message;
-$Body .= "\n";
 
 // send email
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
