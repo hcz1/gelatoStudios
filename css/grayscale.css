@@ -240,7 +240,6 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
   background-color: #0abab5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -345,4 +344,10 @@ body {
 }
 .well{
   background-color: #0abab5;
+}
+
+#instafeed a {
+  padding:5px 5px 1px 5px;
+  margin:10px;
+  border-radius: 4px;
 }
