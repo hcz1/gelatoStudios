@@ -19,14 +19,14 @@ function submitForm(){
     var manufacture = $("#manufacture").val();
     var model = $("#model").val();
     var currentColour = $("#currentColour").val();
-    var numberOfDoors = $("#noOfDoors").val();
-    var choiceOfColour = $("#colourChoice").val();
-    var shutsAndReturns = $( "input[name*='rr']" ).val();
+    var noOfDoors = $("#noOfDoors").val();
+    var colourChoice = $("#colourChoice").val();
+    var shutsAndReturns = $( "input[name*='rr']:checked" ).val();
 
     $.ajax({
         type: "POST",
         url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email +"&manufacture="+manufacture+"&model="+model+"&CurrentColour="+currentColour+"&NumberofDoors="+numberOfDoors+"&ChoiceOfColour="+colourChoice+"&ShutsAndReturns="+shutsAndReturns+ "&message=" + message,
+        data: "name=" + name + "&email=" + email +"&manufacture="+manufacture+"&model="+model+"&currentColour="+currentColour+"&noOfDoors="+noOfDoors+"&colourChoice="+colourChoice+"&shutsAndReturns="+shutsAndReturns+ "&message=" + message,
         success : function(text){
             if (text == "success"){
                 formSuccess();

@@ -16,6 +16,7 @@ if (empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
+
 if (empty($_POST["manufacture"])) {
     $errorMSG .= "manufacture is required ";
 } else {
@@ -34,10 +35,10 @@ if (empty($_POST["currentColour"])) {
     $currentColour = $_POST["currentColour"];
 }
 
-if (empty($_POST["noOfdoors"])) {
+if (empty($_POST["noOfDoors"])) {
     $errorMSG .= "Number of doors is required ";
 } else {
-    $noOfdoors = $_POST["noOfdoors"];
+    $noOfdoors = $_POST["noOfDoors"];
 }
 
 if (empty($_POST["colourChoice"])) {
@@ -71,6 +72,9 @@ $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
+$Body .= "Phone Number: ";
+$Body .= $phoneNumber;
+$Body .= "\n";
 $Body .= "Manufacture: ";
 $Body .= $manufacture;
 $Body .= "\n";
@@ -80,13 +84,13 @@ $Body .= "\n";
 $Body .= "Current Colour: ";
 $Body .= $currentColour;
 $Body .= "\n";
-$Body .= "Number of Doors ";
+$Body .= "Number of Doors: ";
 $Body .= $noOfdoors;
 $Body .= "\n";
-$Body .= "Colour of Choice ";
+$Body .= "Colour of Choice: ";
 $Body .= $colourChoice;
 $Body .= "\n";
-$Body .= "Shuts and Returns";
+$Body .= "Shuts and Returns: ";
 $Body .= $shutsAndReturns;
 $Body .= "\n";
 $Body .= "Message: ";
