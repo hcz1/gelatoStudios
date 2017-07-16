@@ -17,7 +17,7 @@
 }
 /* active indicator */
 #quote-carousel .carousel-indicators .active {
-  background: #333333;
+  background: #0abab5;
   height:10px;
   width:10px;
   margin-bottom:1px;
