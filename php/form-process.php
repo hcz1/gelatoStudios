@@ -16,6 +16,11 @@ if (empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
+if (empty($_POST["phone"])) {
+    $errorMSG .= "phone is required ";
+} else {
+    $manufacture = $_POST["phone"];
+}
 
 if (empty($_POST["manufacture"])) {
     $errorMSG .= "manufacture is required ";
@@ -72,8 +77,8 @@ $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Phone Number: ";
-$Body .= $phoneNumber;
+$Body .= "Phone: ";
+$Body .= $phone;
 $Body .= "\n";
 $Body .= "Manufacture: ";
 $Body .= $manufacture;

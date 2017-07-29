@@ -48,10 +48,10 @@ p {
 @media (min-width: 768px) {
   p {
     margin: 20px 0 35px;
-  
     font-size: 20px;
     line-height: 1.6;
   }
+  
 }
 a {
   color: white;
@@ -238,8 +238,8 @@ a:focus {
 }
 .download-section {
   width: 100%;
-  padding: 0px 0;
   color: white;
+  padding-top: 0px;
   background-color: #0abab5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -253,8 +253,7 @@ a:focus {
 }
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 70px;
-    padding-bottom: 75px;
+    padding-top: 50px;
   }
   .download-section {
     padding: 0px 0;
@@ -266,6 +265,7 @@ a:focus {
   .brand-heading1{
     font-size: 100px;
   }
+
 }
 .btn {
   text-transform: uppercase;
@@ -312,7 +312,7 @@ footer {
   padding: 50px 0;
 }
 footer p {
-  margin: 0;
+  
 }
 ::-moz-selection {
   text-shadow: none;
